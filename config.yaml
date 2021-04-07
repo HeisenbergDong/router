@@ -8,6 +8,7 @@ server:
 # system configuration
 system:
   db-type: 'mysql'
+  use-multipoint: false
 
 # gateway configuration
 gateway:
@@ -55,3 +56,9 @@ redis:
   db: 0
   addr: '127.0.0.1:6379'
   password: ''
+
+# jwt configuration
+jwt:
+  signing-key: 'qmPlus'
+  expires-time: 604800
+  buffer-time: 86400

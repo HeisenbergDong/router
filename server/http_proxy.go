@@ -26,14 +26,27 @@ func (r *GatewayProxy) dispatch(w http.ResponseWriter, req *http.Request) {
 			r.globalRecover(ctx, err)
 		}
 	}()
-	//
-	// 请求后端服务
-	err := r.httpProxy(ctx)
+
+	// 收到消息之后，统一进行处理
+	err := filter.BeforeRequestFilter(ctx)
 	if err != nil {
 		ErrorHandle(ctx, err)
 		return
 	}
-	//
+
+	// 请求后端服务
+	err = r.httpProxy(ctx)
+	if err != nil {
+		ErrorHandle(ctx, err)
+		return
+	}
+
+	// 执行后置过滤器
+	err = filter.AfterResponseFilter(ctx)
+	if err != nil {
+		ErrorHandle(ctx, err)
+		return
+	}
 }
 
 // httpProxy 发起 http 请求
