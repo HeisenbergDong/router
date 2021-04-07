@@ -35,7 +35,8 @@ type routerDetails struct {
 }
 
 // match 路由匹配
-func Match(path string) (*url.URL, *Router , error) {
+func Match(path string) (*url.URL, *Router, error) {
+
 	route := match(path)
 	if route == nil {
 		return nil, route, errors.New(path + ", 未匹配上路由")
@@ -48,14 +49,14 @@ func Match(path string) (*url.URL, *Router , error) {
 				Scheme: route.Details.Url.Scheme,
 				Path:   strings.TrimPrefix(path, strings.TrimRight(route.Details.Path, "**")),
 			}
-			return remoteUrl,route, nil
+			return remoteUrl, route, nil
 		} else {
 			remoteUrl := &url.URL{
 				Host:   route.Details.Url.Host,
 				Scheme: route.Details.Url.Scheme,
 				Path:   path,
 			}
-			return remoteUrl,route, nil
+			return remoteUrl, route, nil
 		}
 	} else {
 		return nil, route, errors.New(path + ", 未匹配上路由")
@@ -107,25 +108,25 @@ func InitGatewayRouter() {
 				if u, ok := router[key]; ok {
 					head = u
 				} else {
-					vu :=strings.Split(v.Url,"://")
+					vu := strings.Split(v.Url, "://")
 					var ur *url.URL = nil
-					if len(vu) == 2  {
+					if len(vu) == 2 {
 						ur = &url.URL{
 							Scheme: vu[0],
-							Host: vu[1],
+							Host:   vu[1],
 						}
 					}
 					n := &Router{
 						SubPath: key,
-						Details:  &routerDetails {
-							Path: v.Path,
-							ServiceId:v.ServiceId,
-							Url:ur,
+						Details: &routerDetails{
+							Path:        v.Path,
+							ServiceId:   v.ServiceId,
+							Url:         ur,
 							StripPrefix: v.StripPrefix,
-							Timeout: v.Timeout,
+							Timeout:     v.Timeout,
 						},
-						isLeaf:  true,
-						node:    make(map[string]*Router),
+						isLeaf: true,
+						node:   make(map[string]*Router),
 					}
 					router[key] = n
 					head = n
@@ -134,25 +135,25 @@ func InitGatewayRouter() {
 				if m, ok := head.node[key]; ok {
 					head = m
 				} else {
-					vu :=strings.Split(v.Url,"://")
+					vu := strings.Split(v.Url, "://")
 					var ur *url.URL = nil
-					if len(vu) == 2  {
+					if len(vu) == 2 {
 						ur = &url.URL{
 							Scheme: vu[0],
-							Host: vu[1],
+							Host:   vu[1],
 						}
 					}
 					n := &Router{
 						SubPath: key,
-						Details:  &routerDetails {
-							Path: v.Path,
-							ServiceId:v.ServiceId,
-							Url: ur,
+						Details: &routerDetails{
+							Path:        v.Path,
+							ServiceId:   v.ServiceId,
+							Url:         ur,
 							StripPrefix: v.StripPrefix,
-							Timeout: v.Timeout,
+							Timeout:     v.Timeout,
 						},
-						isLeaf:  true,
-						node:    make(map[string]*Router),
+						isLeaf: true,
+						node:   make(map[string]*Router),
 					}
 					head.isLeaf = false
 					if head.node == nil {

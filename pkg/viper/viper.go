@@ -7,6 +7,7 @@ import (
 	"github.com/spf13/viper"
 	"os"
 	"router/global"
+	"router/router"
 )
 
 const (
@@ -45,6 +46,8 @@ func InitViper(path ...string) *viper.Viper {
 
 	v.OnConfigChange(func(e fsnotify.Event) {
 		fmt.Println("config file changed:", e.Name)
+		//重新读取gateway配置
+		router.InitGatewayRouter()
 		if err := v.Unmarshal(&global.CONFIG); err != nil {
 			fmt.Println(err)
 		}

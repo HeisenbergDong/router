@@ -10,39 +10,40 @@ import (
 	"router/router"
 )
 
-type GatewayProxy struct {}
+type GatewayProxy struct{}
 
 func NewGatewayProxy() *GatewayProxy {
 	return &GatewayProxy{}
 }
 
 // dispatch API 请求分发
-func (r *GatewayProxy)dispatch(w http.ResponseWriter, req *http.Request) {
+func (r *GatewayProxy) dispatch(w http.ResponseWriter, req *http.Request) {
 	ctx := context.NewContext(w, req)
 
-	defer func(){
+	defer func() {
 		if err := recover(); err != nil {
 			global.LOG.Error("dispatch:", zap.Any("err", err))
 			r.globalRecover(ctx, err)
 		}
 	}()
-
+	//
 	// 请求后端服务
 	err := r.httpProxy(ctx)
 	if err != nil {
 		ErrorHandle(ctx, err)
 		return
 	}
+	//
 }
 
 // httpProxy 发起 http 请求
-func (r *GatewayProxy)httpProxy(ctx *context.GatewayContext) error {
+func (r *GatewayProxy) httpProxy(ctx *context.GatewayContext) error {
 
 	// 匹配路由
 	path := ctx.Request.URL.Path
-	remoteUrl,route, err := router.Match(path)
+	remoteUrl, route, err := router.Match(path)
 	if err != nil {
-		global.LOG.Error("match route is fail: ",zap.Any("err", err))
+		global.LOG.Error("match route is fail: ", zap.Any("err", err))
 		return NewError(ProxyUrlNotFound, err.Error())
 	}
 	ctx.RemoteURL = remoteUrl
@@ -77,34 +78,34 @@ func (r *GatewayProxy)httpProxy(ctx *context.GatewayContext) error {
 			return nil
 		},
 		ErrorHandler: r.ErrorHandler,
-		Transport: defaultGatewayTransport.GetTransport(route),
+		Transport:    defaultGatewayTransport.GetTransport(route),
 	}
 
 	proxy.ServeHTTP(ctx.ResponseWriter, ctx.Request)
 
-	global.LOG.Info("Http Proxy",zap.Any("请求完成, 请求地址：", path), zap.Any("目标地址：", remoteUrl))
+	global.LOG.Info("Http Proxy", zap.Any("请求完成, 请求地址：", path), zap.Any("目标地址：", remoteUrl))
 	return nil
 }
 
 // filterSensitiveHeaders 过滤掉请求 Header 中配置的 Key
-func (r *GatewayProxy) filterSensitiveHeaders(req *http.Request)  {
+func (r *GatewayProxy) filterSensitiveHeaders(req *http.Request) {
 	for _, header := range global.CONFIG.GatewayRouter.SensitiveHeaders {
 		req.Header.Del(header)
 	}
 }
 
 // globalErrorHandle Proxy 代理处理错误
-func (r *GatewayProxy)ErrorHandler(w http.ResponseWriter, request *http.Request, err error) {
+func (r *GatewayProxy) ErrorHandler(w http.ResponseWriter, request *http.Request, err error) {
 	global.LOG.Error(err.Error())
-	w.Header().Set("Content-Type","application/json;charset=UTF-8")
+	w.Header().Set("Content-Type", "application/json;charset=UTF-8")
 	w.WriteHeader(http.StatusBadGateway)
 	w.Write([]byte(NewError(ProxyError, err.Error()).Error()))
 }
 
 // globalRecover 捕获全局异常
-func (r *GatewayProxy)globalRecover(ctx *context.GatewayContext, errMsg interface{}){
+func (r *GatewayProxy) globalRecover(ctx *context.GatewayContext, errMsg interface{}) {
 	if ctx.ResponseWriter != nil {
-		ctx.ResponseWriter.Header().Set("Content-Type","application/json;charset=UTF-8")
+		ctx.ResponseWriter.Header().Set("Content-Type", "application/json;charset=UTF-8")
 		ctx.ResponseWriter.WriteHeader(http.StatusBadGateway)
 		ctx.ResponseWriter.Write([]byte(NewError(ProxyError, errMsg).Error()))
 	}
