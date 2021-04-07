@@ -1,0 +1,57 @@
+# server configuration
+server:
+  port: 9527
+  contextPath: /
+  timeout: 10
+  host:
+
+# system configuration
+system:
+  db-type: 'mysql'
+
+# gateway configuration
+gateway:
+  ignoredPatterns: [ /gateway, /js, /css ]
+  sensitiveHeaders: [Cookie]
+  routers:
+    user:
+      path: /user/**
+      serviceId: user
+      stripPrefix: false
+      url: http://127.0.0.1:8080
+      timeout: 20
+    gitbook:
+      path: /gitchat/**
+      url: https://gitbook.cn
+      stripPrefix: false
+      timeout: 5
+
+# zap logger configuration
+zap:
+  level: 'info'
+  format: 'console'
+  prefix: '[GIN-VUE-ADMIN]'
+  director: 'logs'
+  link-name: 'latest_log'
+  show-line: true
+  encode-level: 'LowercaseColorLevelEncoder'
+  stacktrace-key: 'stacktrace'
+  log-in-console: true
+
+# mysql connect configuration
+mysql:
+  path: '127.0.0.1:3306'
+  config: 'charset=utf8mb4&parseTime=True&loc=Local'
+  db-name: 'qmPlus'
+  username: 'root'
+  password: '521207'
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: true
+  log-zap: ""
+
+# redis configuration
+redis:
+  db: 0
+  addr: '127.0.0.1:6379'
+  password: ''

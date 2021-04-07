@@ -1,0 +1,35 @@
+[GIN-VUE-ADMIN]2021/04/07 - 09:51:39.881	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/map/v1/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:51:56.882	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/map/v1/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:52:29.599	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/map/v1/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:54:09.974	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:56:28.186	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 09:56:59.252	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/gitchat/", "目标地址：": "https://gitbook.cn/gitchat/"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:57:16.006	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/gitchat/", "目标地址：": "https://gitbook.cn/gitchat/"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:57:18.971	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/gitchat/", "目标地址：": "https://gitbook.cn/gitchat/"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:57:24.025	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/gitchat, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:57:26.099	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/gitchat, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:57:32.970	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/gitchat/", "目标地址：": "https://gitbook.cn/gitchat/"}
+[GIN-VUE-ADMIN]2021/04/07 - 09:58:16.594	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/gitchat/activity/603f4254494aab1ce4f231cd", "目标地址：": "https://gitbook.cn/gitchat/activity/603f4254494aab1ce4f231cd"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:06:16.077	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:06:19.645	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:06:58.316	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/v1/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:08:16.272	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:08:20.358	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:09:08.933	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:09:08.934	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:09:13.805	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:09:14.953	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:45	match route is fail: 	{"err": "/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:09:38.297	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:10:38.322	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:10:50.260	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:11:55.976	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:12:13.415	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:12:20.704	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:12:45.816	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:98	dial tcp 27.0.0.1:8080: i/o timeout
+[GIN-VUE-ADMIN]2021/04/07 - 10:12:45.816	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://27.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:13:09.186	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:13:09.186	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/07 - 10:13:12.470	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:14:05.657	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:14:13.612	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/07 - 10:14:28.225	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:85	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
