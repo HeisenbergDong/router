@@ -28,7 +28,8 @@ func (r *GatewayProxy) dispatch(w http.ResponseWriter, req *http.Request) {
 	}()
 
 	// 收到消息之后，统一进行处理
-	err := filter.BeforeRequestFilter(ctx)
+	need := router.IsFilter(ctx.Request.URL.Path)
+	err := filter.BeforeRequestFilter(need, ctx)
 	if err != nil {
 		ErrorHandle(ctx, err)
 		return

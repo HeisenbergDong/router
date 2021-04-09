@@ -12,9 +12,15 @@ system:
 
 # gateway configuration
 gateway:
-  ignoredPatterns: [ /gateway, /js, /css ]
+  ignoredPatterns: [ base, gateway, js, css ]
   sensitiveHeaders: [Cookie]
   routers:
+    base:
+      path: /base/**
+      serviceId: user
+      stripPrefix: false
+      url: http://127.0.0.1:8080
+      timeout: 20
     user:
       path: /user/**
       serviceId: user

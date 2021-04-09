@@ -34,6 +34,17 @@ type routerDetails struct {
 	Timeout time.Duration
 }
 
+func IsFilter(path string) bool {
+	paths := strings.Split(strings.TrimLeft(path, "/"), "/")
+	Ignored := global.CONFIG.GatewayRouter.IgnoredPatterns
+	for _, ignore := range Ignored {
+		if paths[0] == ignore {
+			return false
+		}
+	}
+	return true
+}
+
 // match 路由匹配
 func Match(path string) (*url.URL, *Router, error) {
 

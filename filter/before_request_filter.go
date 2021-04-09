@@ -14,9 +14,9 @@ var beforeRequestLock = &sync.RWMutex{}
 func registerBeforeRequest(handle Handler) {
 	beforeRequestLock.Lock()
 	defer beforeRequestLock.Unlock()
-	global.LOG.Info("注册过滤器，过滤器名称是：", zap.Any("handleName",handle.Name))
+	global.LOG.Info("注册过滤器，过滤器名称是：", zap.Any("handleName", handle.Name))
 
-	result := make([]Handler, len(beforeRequestFunc) + 1)
+	result := make([]Handler, len(beforeRequestFunc)+1)
 
 	if len(beforeRequestFunc) == 0 {
 		result = append(beforeRequestFunc, handle)
@@ -27,7 +27,7 @@ func registerBeforeRequest(handle Handler) {
 					// 第一个元素
 					f := []Handler{handle}
 					result = append(f, beforeRequestFunc[0])
-				} else if idx + 1 == len(beforeRequestFunc) {
+				} else if idx+1 == len(beforeRequestFunc) {
 					// 最后一个元素
 					last := beforeRequestFunc[idx]
 					v := append(beforeRequestFunc[:idx], handle)
@@ -45,17 +45,19 @@ func registerBeforeRequest(handle Handler) {
 	beforeRequestFunc = result
 }
 
-func BeforeRequestFilter(ctx *context.GatewayContext)  error {
+func BeforeRequestFilter(need bool, ctx *context.GatewayContext) error {
 	beforeRequestLock.RLock()
 	defer beforeRequestLock.RUnlock()
 
 	for _, f := range beforeRequestFunc {
-		err := f.Handle(ctx)
-		if err != nil {
-			global.LOG.Error("BeforeRequestFilter: ", zap.Any("err",err))
-			return err
+		if need {
+			err := f.Handle(ctx)
+			if err != nil {
+				global.LOG.Error("BeforeRequestFilter: ", zap.Any("err", err))
+				return err
+			}
 		}
 	}
 
-	return  nil
+	return nil
 }
