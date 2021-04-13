@@ -1,0 +1,27 @@
+syntax = "proto3"; // 指定 proto 版本
+option go_package = ".;jwt";
+
+package jwt;     // 指定包名
+
+// 定义 JWT 服务
+service JWT {
+  // 定义 CreateToken 方法
+  rpc CreateToken(SysUser) returns (TokenMessage);
+}
+
+// SysUser 请求结构
+message SysUser {
+  uint64 t = 1;
+  uint64 id = 2;
+  string uuid = 3;
+  string userName = 4;
+  string password = 5;
+  string nickName = 6;
+  string authorityId = 7;
+}
+
+// Token 响应结构
+message TokenMessage {
+  string token = 1;
+  int64 expiresAt = 2;
+}

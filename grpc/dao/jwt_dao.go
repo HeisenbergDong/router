@@ -4,7 +4,7 @@ import (
 	"errors"
 	"gorm.io/gorm"
 	"router/global"
-	"router/jwt/model"
+	"router/grpc/model"
 )
 
 func IsBlacklist(jwt string) bool {

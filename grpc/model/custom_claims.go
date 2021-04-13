@@ -2,12 +2,11 @@ package model
 
 import (
 	"github.com/dgrijalva/jwt-go"
-	uuid "github.com/satori/go.uuid"
 )
 
 type CustomClaims struct {
-	UUID        uuid.UUID
-	ID          uint
+	UUID        string
+	ID          uint64
 	UserName    string
 	NickName    string
 	AuthorityId string
