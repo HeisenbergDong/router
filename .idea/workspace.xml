@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bad18dd2-d905-4e96-b6f8-fc096ab02862" name="Default Changelist" comment="grpc结构调整">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/router.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_7,_1_28_下午_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_7__1_28___Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2021-04-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/2021-04-09.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/pb/jwt.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/jwt.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/proto/jwt.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/proto/jwt.proto" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1qVegNjo8od0kdggltk0rcTpdLJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpc/server" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpc/pb" />
+      <recent name="$PROJECT_DIR$/grpc" />
+      <recent name="$PROJECT_DIR$/grpc/server" />
+      <recent name="$PROJECT_DIR$/grpc/server/controller/pb" />
+      <recent name="$PROJECT_DIR$/grpc/server/controller/proto" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpc/server" />
+      <recent name="$PROJECT_DIR$/grpc/server/controller/proto/jwt" />
+      <recent name="$PROJECT_DIR$/grpc" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build router/grpc">
+    <configuration name="go build router" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="router" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="router" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build router/grpc" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="router" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grpc/main.go" />
+      <package value="router/grpc" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Go Build.go build router" />
+      <item itemvalue="Go Build.go build router/grpc" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build router/grpc" />
+        <item itemvalue="Go Build.go build router" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bad18dd2-d905-4e96-b6f8-fc096ab02862" name="Default Changelist" comment="" />
+      <created>1617169294711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617169294711</updated>
+    </task>
+    <task id="LOCAL-00001" summary="增加动态刷新">
+      <created>1617773126181</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617773126181</updated>
+    </task>
+    <task id="LOCAL-00002" summary="增加JWT">
+      <created>1617781767034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617781767034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加过滤器是否过滤的能力">
+      <created>1617948204356</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617948204356</updated>
+    </task>
+    <task id="LOCAL-00004" summary="grpc结构调整">
+      <created>1618295981523</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618295981523</updated>
+    </task>
+    <task id="LOCAL-00005" summary="grpc结构调整">
+      <created>1618296193670</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1618296193670</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加动态刷新" />
+    <MESSAGE value="增加JWT" />
+    <MESSAGE value="增加过滤器是否过滤的能力" />
+    <MESSAGE value="grpc结构调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="grpc结构调整" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.io,direct" />
+      </map>
+    </environment>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="184" width="1071" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618291931961">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="184" width="1071" height="707" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618291931961" />
+    <state x="561" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1618199292812">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="561" y="331" key="#com.intellij.fileTypes.FileTypeChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618199292812" />
+    <state x="909" y="148" key="#xdebugger.evaluate" timestamp="1617947812400">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="909" y="148" key="#xdebugger.evaluate/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617947812400" />
+    <state width="476" height="466" key="DebuggerActiveHint" timestamp="1617947746201">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="476" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617947746201" />
+    <state x="741" y="391" width="488" height="268" key="EnvironmentVariablesDialog" timestamp="1617169858666">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="741" y="391" width="488" height="268" key="EnvironmentVariablesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617169858666" />
+    <state x="714" y="426" key="Github.ShareDialog" timestamp="1617762479183">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="714" y="426" key="Github.ShareDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617762479183" />
+    <state x="607" y="231" key="Github.UntrackedFilesDialog" timestamp="1617762493108">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="607" y="231" key="Github.UntrackedFilesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617762493108" />
+    <state width="1638" height="364" key="GridCell.Tab.-1.bottom" timestamp="1617765080787">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.-1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617765080787" />
+    <state width="1638" height="364" key="GridCell.Tab.-1.center" timestamp="1617765080783">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.-1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617765080783" />
+    <state width="1638" height="364" key="GridCell.Tab.-1.left" timestamp="1617765080782">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.-1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617765080782" />
+    <state width="1638" height="364" key="GridCell.Tab.-1.right" timestamp="1617765080786">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.-1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617765080786" />
+    <state width="1638" height="364" key="GridCell.Tab.0.bottom" timestamp="1618296298971">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298971" />
+    <state width="1638" height="364" key="GridCell.Tab.0.center" timestamp="1618296298968">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298968" />
+    <state width="1638" height="364" key="GridCell.Tab.0.left" timestamp="1618296298967">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298967" />
+    <state width="1638" height="364" key="GridCell.Tab.0.right" timestamp="1618296298969">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298969" />
+    <state width="1638" height="364" key="GridCell.Tab.1.bottom" timestamp="1618296298975">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298975" />
+    <state width="1638" height="364" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.25.1680.953@0.25.1680.953" timestamp="1617948057207" />
+    <state width="1638" height="364" key="GridCell.Tab.1.center" timestamp="1618296298973">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298973" />
+    <state width="1638" height="364" key="GridCell.Tab.1.center/1680.0.1920.1080/0.25.1680.953@0.25.1680.953" timestamp="1617948057204" />
+    <state width="1638" height="364" key="GridCell.Tab.1.left" timestamp="1618296298972">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298972" />
+    <state width="1638" height="364" key="GridCell.Tab.1.left/1680.0.1920.1080/0.25.1680.953@0.25.1680.953" timestamp="1617948057203" />
+    <state width="1638" height="364" key="GridCell.Tab.1.right" timestamp="1618296298974">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="364" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296298974" />
+    <state width="1638" height="364" key="GridCell.Tab.1.right/1680.0.1920.1080/0.25.1680.953@0.25.1680.953" timestamp="1617948057206" />
+    <state x="601" y="231" key="RollbackChangesDialog" timestamp="1618296312395">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="601" y="231" key="RollbackChangesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296312395" />
+    <state x="349" y="161" key="SettingsEditor" timestamp="1617169860611">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="349" y="161" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617169860611" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1618296320553">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296320553" />
+    <state x="33" y="407" width="1609" height="355" key="dock-window-1" timestamp="1617766635980">
+      <screen x="0" y="25" width="1680" height="953" />
+    </state>
+    <state x="33" y="407" width="1609" height="355" key="dock-window-1/1680.0.1920.1080/0.25.1680.953@0.25.1680.953" timestamp="1617766635980" />
+    <state x="675" y="254" width="597" height="490" key="find.popup" timestamp="1618208188832">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="675" y="254" width="597" height="490" key="find.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618208188832" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1618204868115">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618204868115" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/router/router.go</url>
+          <line>37</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="DlvErrorBreakpoint" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

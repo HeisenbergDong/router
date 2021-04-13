@@ -11,13 +11,12 @@ service JWT {
 
 // SysUser 请求结构
 message SysUser {
-  uint64 t = 1;
-  uint64 id = 2;
-  string uuid = 3;
-  string userName = 4;
-  string password = 5;
-  string nickName = 6;
-  string authorityId = 7;
+  uint64 id = 1;
+  string uuid = 2;
+  string userName = 3;
+  string password = 4;
+  string nickName = 5;
+  string authorityId = 6;
 }
 
 // Token 响应结构

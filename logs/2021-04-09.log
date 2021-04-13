@@ -1,0 +1,22 @@
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:07.726	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:07.727	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:17	注册过滤器，过滤器名称是：	{"handleName": "JWT"}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:07.727	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:27.586	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:55	BeforeRequestFilter: 	{"err": "token is expired"}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:48.161	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:48.162	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/09 - 11:19:54.738	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:59	match route is fail: 	{"err": "/gateway/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:19.406	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:19.407	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:17	注册过滤器，过滤器名称是：	{"handleName": "JWT"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:19.407	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:25.199	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:25.199	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:33.202	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:59	match route is fail: 	{"err": "/gateway/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:37.479	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:59	match route is fail: 	{"err": "/base/user/getUserList, 未匹配上路由"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:30:41.318	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:99	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/09 - 13:40:40.713	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:99	Http Proxy	{"请求完成, 请求地址：": "/user/getUserList", "目标地址：": "http://127.0.0.1:8080/user/getUserList"}
+[GIN-VUE-ADMIN]2021/04/09 - 14:00:27.645	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/pkg/redis/redis.go:20	redis connect ping response:	{"pong": "PONG"}
+[GIN-VUE-ADMIN]2021/04/09 - 14:00:27.646	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:17	注册过滤器，过滤器名称是：	{"handleName": "JWT"}
+[GIN-VUE-ADMIN]2021/04/09 - 14:00:27.646	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_server.go:34	服务启动中，服务绑定端口号：	{"port": 9527}
+[GIN-VUE-ADMIN]2021/04/09 - 14:00:42.658	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:56	BeforeRequestFilter: 	{"err": "token is null"}
+[GIN-VUE-ADMIN]2021/04/09 - 14:01:32.789	[31merror[0m	/Users/donghongbing/golandProject/go/src/router/filter/before_request_filter.go:56	BeforeRequestFilter: 	{"err": "token is null"}
+[GIN-VUE-ADMIN]2021/04/09 - 14:02:10.573	[34minfo[0m	/Users/donghongbing/golandProject/go/src/router/server/http_proxy.go:100	Http Proxy	{"请求完成, 请求地址：": "/base/login", "目标地址：": "http://127.0.0.1:8080/base/login"}
