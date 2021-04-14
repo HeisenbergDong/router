@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bad18dd2-d905-4e96-b6f8-fc096ab02862" name="Default Changelist" comment="grpc结构调整">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/router.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_7,_1_28_下午_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_4_7__1_28___Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2021-04-08.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2021-04-09.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/controller/jwt_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/controller/jwt_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/pb/jwt.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/pb/jwt.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grpc/proto/jwt.proto" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/proto/jwt.proto" afterDir="false" />
     </list>
@@ -136,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618296193670</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="grpc结构调整">
+      <created>1618304395176</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1618304395176</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,10 +247,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="349" y="161" key="SettingsEditor/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1617169860611" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1618296320553">
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1618304397211">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618296320553" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1618304397211" />
     <state x="33" y="407" width="1609" height="355" key="dock-window-1" timestamp="1617766635980">
       <screen x="0" y="25" width="1680" height="953" />
     </state>

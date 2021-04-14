@@ -29,6 +29,278 @@ const (
 // of the legacy proto package is being used.
 const _ = proto.ProtoPackageIsVersion4
 
+type JsonInBlacklistReq struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	BlackJWT string `protobuf:"bytes,1,opt,name=blackJWT,proto3" json:"blackJWT,omitempty"`
+}
+
+func (x *JsonInBlacklistReq) Reset() {
+	*x = JsonInBlacklistReq{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *JsonInBlacklistReq) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*JsonInBlacklistReq) ProtoMessage() {}
+
+func (x *JsonInBlacklistReq) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use JsonInBlacklistReq.ProtoReflect.Descriptor instead.
+func (*JsonInBlacklistReq) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{0}
+}
+
+func (x *JsonInBlacklistReq) GetBlackJWT() string {
+	if x != nil {
+		return x.BlackJWT
+	}
+	return ""
+}
+
+type JsonInBlacklistRep struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *JsonInBlacklistRep) Reset() {
+	*x = JsonInBlacklistRep{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *JsonInBlacklistRep) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*JsonInBlacklistRep) ProtoMessage() {}
+
+func (x *JsonInBlacklistRep) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use JsonInBlacklistRep.ProtoReflect.Descriptor instead.
+func (*JsonInBlacklistRep) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{1}
+}
+
+type SetRedisJWTReq struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Token    string `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	UserName string `protobuf:"bytes,2,opt,name=userName,proto3" json:"userName,omitempty"`
+}
+
+func (x *SetRedisJWTReq) Reset() {
+	*x = SetRedisJWTReq{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SetRedisJWTReq) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SetRedisJWTReq) ProtoMessage() {}
+
+func (x *SetRedisJWTReq) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SetRedisJWTReq.ProtoReflect.Descriptor instead.
+func (*SetRedisJWTReq) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *SetRedisJWTReq) GetToken() string {
+	if x != nil {
+		return x.Token
+	}
+	return ""
+}
+
+func (x *SetRedisJWTReq) GetUserName() string {
+	if x != nil {
+		return x.UserName
+	}
+	return ""
+}
+
+type SetRedisJWTRep struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *SetRedisJWTRep) Reset() {
+	*x = SetRedisJWTRep{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *SetRedisJWTRep) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SetRedisJWTRep) ProtoMessage() {}
+
+func (x *SetRedisJWTRep) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use SetRedisJWTRep.ProtoReflect.Descriptor instead.
+func (*SetRedisJWTRep) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{3}
+}
+
+type GetRedisJWTReq struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	UserName string `protobuf:"bytes,1,opt,name=userName,proto3" json:"userName,omitempty"`
+}
+
+func (x *GetRedisJWTReq) Reset() {
+	*x = GetRedisJWTReq{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[4]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetRedisJWTReq) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetRedisJWTReq) ProtoMessage() {}
+
+func (x *GetRedisJWTReq) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[4]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetRedisJWTReq.ProtoReflect.Descriptor instead.
+func (*GetRedisJWTReq) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetRedisJWTReq) GetUserName() string {
+	if x != nil {
+		return x.UserName
+	}
+	return ""
+}
+
+type GetRedisRep struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	RedisJwt string `protobuf:"bytes,1,opt,name=redisJwt,proto3" json:"redisJwt,omitempty"`
+}
+
+func (x *GetRedisRep) Reset() {
+	*x = GetRedisRep{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_jwt_proto_msgTypes[5]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GetRedisRep) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetRedisRep) ProtoMessage() {}
+
+func (x *GetRedisRep) ProtoReflect() protoreflect.Message {
+	mi := &file_jwt_proto_msgTypes[5]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetRedisRep.ProtoReflect.Descriptor instead.
+func (*GetRedisRep) Descriptor() ([]byte, []int) {
+	return file_jwt_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GetRedisRep) GetRedisJwt() string {
+	if x != nil {
+		return x.RedisJwt
+	}
+	return ""
+}
+
 // SysUser 请求结构
 type SysUser struct {
 	state         protoimpl.MessageState
@@ -46,7 +318,7 @@ type SysUser struct {
 func (x *SysUser) Reset() {
 	*x = SysUser{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_jwt_proto_msgTypes[0]
+		mi := &file_jwt_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -59,7 +331,7 @@ func (x *SysUser) String() string {
 func (*SysUser) ProtoMessage() {}
 
 func (x *SysUser) ProtoReflect() protoreflect.Message {
-	mi := &file_jwt_proto_msgTypes[0]
+	mi := &file_jwt_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -72,7 +344,7 @@ func (x *SysUser) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SysUser.ProtoReflect.Descriptor instead.
 func (*SysUser) Descriptor() ([]byte, []int) {
-	return file_jwt_proto_rawDescGZIP(), []int{0}
+	return file_jwt_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SysUser) GetId() uint64 {
@@ -130,7 +402,7 @@ type TokenMessage struct {
 func (x *TokenMessage) Reset() {
 	*x = TokenMessage{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_jwt_proto_msgTypes[1]
+		mi := &file_jwt_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -143,7 +415,7 @@ func (x *TokenMessage) String() string {
 func (*TokenMessage) ProtoMessage() {}
 
 func (x *TokenMessage) ProtoReflect() protoreflect.Message {
-	mi := &file_jwt_proto_msgTypes[1]
+	mi := &file_jwt_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -156,7 +428,7 @@ func (x *TokenMessage) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenMessage.ProtoReflect.Descriptor instead.
 func (*TokenMessage) Descriptor() ([]byte, []int) {
-	return file_jwt_proto_rawDescGZIP(), []int{1}
+	return file_jwt_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *TokenMessage) GetToken() string {
@@ -177,26 +449,52 @@ var File_jwt_proto protoreflect.FileDescriptor
 
 var file_jwt_proto_rawDesc = []byte{
 	0x0a, 0x09, 0x6a, 0x77, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x6a, 0x77, 0x74,
-	0x22, 0xa3, 0x01, 0x0a, 0x07, 0x53, 0x79, 0x73, 0x55, 0x73, 0x65, 0x72, 0x12, 0x0e, 0x0a, 0x02,
-	0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52, 0x02, 0x69, 0x64, 0x12, 0x12, 0x0a, 0x04,
-	0x75, 0x75, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x75, 0x75, 0x69, 0x64,
-	0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08,
-	0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
-	0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b,
-	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x20, 0x0a, 0x0b, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74,
-	0x79, 0x49, 0x64, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x61, 0x75, 0x74, 0x68, 0x6f,
-	0x72, 0x69, 0x74, 0x79, 0x49, 0x64, 0x22, 0x42, 0x0a, 0x0c, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x4d,
-	0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1c, 0x0a, 0x09,
-	0x65, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x41, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52,
-	0x09, 0x65, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x41, 0x74, 0x32, 0x35, 0x0a, 0x03, 0x4a, 0x57,
-	0x54, 0x12, 0x2e, 0x0a, 0x0b, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
-	0x12, 0x0c, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x53, 0x79, 0x73, 0x55, 0x73, 0x65, 0x72, 0x1a, 0x11,
-	0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67,
-	0x65, 0x42, 0x07, 0x5a, 0x05, 0x2e, 0x3b, 0x6a, 0x77, 0x74, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x22, 0x30, 0x0a, 0x12, 0x4a, 0x73, 0x6f, 0x6e, 0x49, 0x6e, 0x42, 0x6c, 0x61, 0x63, 0x6b, 0x6c,
+	0x69, 0x73, 0x74, 0x52, 0x65, 0x71, 0x12, 0x1a, 0x0a, 0x08, 0x62, 0x6c, 0x61, 0x63, 0x6b, 0x4a,
+	0x57, 0x54, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x6c, 0x61, 0x63, 0x6b, 0x4a,
+	0x57, 0x54, 0x22, 0x14, 0x0a, 0x12, 0x4a, 0x73, 0x6f, 0x6e, 0x49, 0x6e, 0x42, 0x6c, 0x61, 0x63,
+	0x6b, 0x6c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x70, 0x22, 0x42, 0x0a, 0x0e, 0x53, 0x65, 0x74, 0x52,
+	0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x52, 0x65, 0x71, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f,
+	0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
+	0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x10, 0x0a, 0x0e,
+	0x53, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x52, 0x65, 0x70, 0x22, 0x2c,
+	0x0a, 0x0e, 0x47, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x52, 0x65, 0x71,
+	0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x29, 0x0a, 0x0b,
+	0x47, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x52, 0x65, 0x70, 0x12, 0x1a, 0x0a, 0x08, 0x72,
+	0x65, 0x64, 0x69, 0x73, 0x4a, 0x77, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x72,
+	0x65, 0x64, 0x69, 0x73, 0x4a, 0x77, 0x74, 0x22, 0xa3, 0x01, 0x0a, 0x07, 0x53, 0x79, 0x73, 0x55,
+	0x73, 0x65, 0x72, 0x12, 0x0e, 0x0a, 0x02, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x04, 0x52,
+	0x02, 0x69, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x75, 0x75, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x04, 0x75, 0x75, 0x69, 0x64, 0x12, 0x1a, 0x0a, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e,
+	0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x75, 0x73, 0x65, 0x72, 0x4e,
+	0x61, 0x6d, 0x65, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18,
+	0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12,
+	0x1a, 0x0a, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x05, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x6e, 0x69, 0x63, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x20, 0x0a, 0x0b, 0x61,
+	0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x49, 0x64, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x0b, 0x61, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x49, 0x64, 0x22, 0x42, 0x0a,
+	0x0c, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x14, 0x0a,
+	0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f,
+	0x6b, 0x65, 0x6e, 0x12, 0x1c, 0x0a, 0x09, 0x65, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x41, 0x74,
+	0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x09, 0x65, 0x78, 0x70, 0x69, 0x72, 0x65, 0x73, 0x41,
+	0x74, 0x32, 0xe9, 0x01, 0x0a, 0x03, 0x4a, 0x57, 0x54, 0x12, 0x2e, 0x0a, 0x0b, 0x43, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x0c, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x53,
+	0x79, 0x73, 0x55, 0x73, 0x65, 0x72, 0x1a, 0x11, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x34, 0x0a, 0x0b, 0x47, 0x65, 0x74,
+	0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x12, 0x13, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x47,
+	0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x52, 0x65, 0x71, 0x1a, 0x10, 0x2e,
+	0x6a, 0x77, 0x74, 0x2e, 0x47, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x52, 0x65, 0x70, 0x12,
+	0x37, 0x0a, 0x0b, 0x53, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54, 0x12, 0x13,
+	0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x53, 0x65, 0x74, 0x52, 0x65, 0x64, 0x69, 0x73, 0x4a, 0x57, 0x54,
+	0x52, 0x65, 0x71, 0x1a, 0x13, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x53, 0x65, 0x74, 0x52, 0x65, 0x64,
+	0x69, 0x73, 0x4a, 0x57, 0x54, 0x52, 0x65, 0x70, 0x12, 0x43, 0x0a, 0x0f, 0x4a, 0x73, 0x6f, 0x6e,
+	0x49, 0x6e, 0x42, 0x6c, 0x61, 0x63, 0x6b, 0x6c, 0x69, 0x73, 0x74, 0x12, 0x17, 0x2e, 0x6a, 0x77,
+	0x74, 0x2e, 0x4a, 0x73, 0x6f, 0x6e, 0x49, 0x6e, 0x42, 0x6c, 0x61, 0x63, 0x6b, 0x6c, 0x69, 0x73,
+	0x74, 0x52, 0x65, 0x71, 0x1a, 0x17, 0x2e, 0x6a, 0x77, 0x74, 0x2e, 0x4a, 0x73, 0x6f, 0x6e, 0x49,
+	0x6e, 0x42, 0x6c, 0x61, 0x63, 0x6b, 0x6c, 0x69, 0x73, 0x74, 0x52, 0x65, 0x70, 0x42, 0x07, 0x5a,
+	0x05, 0x2e, 0x3b, 0x6a, 0x77, 0x74, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -211,16 +509,28 @@ func file_jwt_proto_rawDescGZIP() []byte {
 	return file_jwt_proto_rawDescData
 }
 
-var file_jwt_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_jwt_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
 var file_jwt_proto_goTypes = []interface{}{
-	(*SysUser)(nil),      // 0: jwt.SysUser
-	(*TokenMessage)(nil), // 1: jwt.TokenMessage
+	(*JsonInBlacklistReq)(nil), // 0: jwt.JsonInBlacklistReq
+	(*JsonInBlacklistRep)(nil), // 1: jwt.JsonInBlacklistRep
+	(*SetRedisJWTReq)(nil),     // 2: jwt.SetRedisJWTReq
+	(*SetRedisJWTRep)(nil),     // 3: jwt.SetRedisJWTRep
+	(*GetRedisJWTReq)(nil),     // 4: jwt.GetRedisJWTReq
+	(*GetRedisRep)(nil),        // 5: jwt.GetRedisRep
+	(*SysUser)(nil),            // 6: jwt.SysUser
+	(*TokenMessage)(nil),       // 7: jwt.TokenMessage
 }
 var file_jwt_proto_depIdxs = []int32{
-	0, // 0: jwt.JWT.CreateToken:input_type -> jwt.SysUser
-	1, // 1: jwt.JWT.CreateToken:output_type -> jwt.TokenMessage
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	6, // 0: jwt.JWT.CreateToken:input_type -> jwt.SysUser
+	4, // 1: jwt.JWT.GetRedisJWT:input_type -> jwt.GetRedisJWTReq
+	2, // 2: jwt.JWT.SetRedisJWT:input_type -> jwt.SetRedisJWTReq
+	0, // 3: jwt.JWT.JsonInBlacklist:input_type -> jwt.JsonInBlacklistReq
+	7, // 4: jwt.JWT.CreateToken:output_type -> jwt.TokenMessage
+	5, // 5: jwt.JWT.GetRedisJWT:output_type -> jwt.GetRedisRep
+	3, // 6: jwt.JWT.SetRedisJWT:output_type -> jwt.SetRedisJWTRep
+	1, // 7: jwt.JWT.JsonInBlacklist:output_type -> jwt.JsonInBlacklistRep
+	4, // [4:8] is the sub-list for method output_type
+	0, // [0:4] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -233,7 +543,7 @@ func file_jwt_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_jwt_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SysUser); i {
+			switch v := v.(*JsonInBlacklistReq); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -245,6 +555,78 @@ func file_jwt_proto_init() {
 			}
 		}
 		file_jwt_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*JsonInBlacklistRep); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SetRedisJWTReq); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SetRedisJWTRep); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetRedisJWTReq); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetRedisRep); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*SysUser); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_jwt_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenMessage); i {
 			case 0:
 				return &v.state
@@ -263,7 +645,7 @@ func file_jwt_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_jwt_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   8,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -291,6 +673,9 @@ const _ = grpc.SupportPackageIsVersion6
 type JWTClient interface {
 	// 定义 CreateToken 方法
 	CreateToken(ctx context.Context, in *SysUser, opts ...grpc.CallOption) (*TokenMessage, error)
+	GetRedisJWT(ctx context.Context, in *GetRedisJWTReq, opts ...grpc.CallOption) (*GetRedisRep, error)
+	SetRedisJWT(ctx context.Context, in *SetRedisJWTReq, opts ...grpc.CallOption) (*SetRedisJWTRep, error)
+	JsonInBlacklist(ctx context.Context, in *JsonInBlacklistReq, opts ...grpc.CallOption) (*JsonInBlacklistRep, error)
 }
 
 type jWTClient struct {
@@ -310,10 +695,40 @@ func (c *jWTClient) CreateToken(ctx context.Context, in *SysUser, opts ...grpc.C
 	return out, nil
 }
 
+func (c *jWTClient) GetRedisJWT(ctx context.Context, in *GetRedisJWTReq, opts ...grpc.CallOption) (*GetRedisRep, error) {
+	out := new(GetRedisRep)
+	err := c.cc.Invoke(ctx, "/jwt.JWT/GetRedisJWT", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *jWTClient) SetRedisJWT(ctx context.Context, in *SetRedisJWTReq, opts ...grpc.CallOption) (*SetRedisJWTRep, error) {
+	out := new(SetRedisJWTRep)
+	err := c.cc.Invoke(ctx, "/jwt.JWT/SetRedisJWT", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *jWTClient) JsonInBlacklist(ctx context.Context, in *JsonInBlacklistReq, opts ...grpc.CallOption) (*JsonInBlacklistRep, error) {
+	out := new(JsonInBlacklistRep)
+	err := c.cc.Invoke(ctx, "/jwt.JWT/JsonInBlacklist", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // JWTServer is the server API for JWT service.
 type JWTServer interface {
 	// 定义 CreateToken 方法
 	CreateToken(context.Context, *SysUser) (*TokenMessage, error)
+	GetRedisJWT(context.Context, *GetRedisJWTReq) (*GetRedisRep, error)
+	SetRedisJWT(context.Context, *SetRedisJWTReq) (*SetRedisJWTRep, error)
+	JsonInBlacklist(context.Context, *JsonInBlacklistReq) (*JsonInBlacklistRep, error)
 }
 
 // UnimplementedJWTServer can be embedded to have forward compatible implementations.
@@ -322,6 +737,15 @@ type UnimplementedJWTServer struct {
 
 func (*UnimplementedJWTServer) CreateToken(context.Context, *SysUser) (*TokenMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateToken not implemented")
+}
+func (*UnimplementedJWTServer) GetRedisJWT(context.Context, *GetRedisJWTReq) (*GetRedisRep, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetRedisJWT not implemented")
+}
+func (*UnimplementedJWTServer) SetRedisJWT(context.Context, *SetRedisJWTReq) (*SetRedisJWTRep, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SetRedisJWT not implemented")
+}
+func (*UnimplementedJWTServer) JsonInBlacklist(context.Context, *JsonInBlacklistReq) (*JsonInBlacklistRep, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method JsonInBlacklist not implemented")
 }
 
 func RegisterJWTServer(s *grpc.Server, srv JWTServer) {
@@ -346,6 +770,60 @@ func _JWT_CreateToken_Handler(srv interface{}, ctx context.Context, dec func(int
 	return interceptor(ctx, in, info, handler)
 }
 
+func _JWT_GetRedisJWT_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetRedisJWTReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(JWTServer).GetRedisJWT(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/jwt.JWT/GetRedisJWT",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(JWTServer).GetRedisJWT(ctx, req.(*GetRedisJWTReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _JWT_SetRedisJWT_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SetRedisJWTReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(JWTServer).SetRedisJWT(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/jwt.JWT/SetRedisJWT",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(JWTServer).SetRedisJWT(ctx, req.(*SetRedisJWTReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _JWT_JsonInBlacklist_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(JsonInBlacklistReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(JWTServer).JsonInBlacklist(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/jwt.JWT/JsonInBlacklist",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(JWTServer).JsonInBlacklist(ctx, req.(*JsonInBlacklistReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _JWT_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "jwt.JWT",
 	HandlerType: (*JWTServer)(nil),
@@ -353,6 +831,18 @@ var _JWT_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateToken",
 			Handler:    _JWT_CreateToken_Handler,
+		},
+		{
+			MethodName: "GetRedisJWT",
+			Handler:    _JWT_GetRedisJWT_Handler,
+		},
+		{
+			MethodName: "SetRedisJWT",
+			Handler:    _JWT_SetRedisJWT_Handler,
+		},
+		{
+			MethodName: "JsonInBlacklist",
+			Handler:    _JWT_JsonInBlacklist_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -7,6 +7,33 @@ package jwt;     // 指定包名
 service JWT {
   // 定义 CreateToken 方法
   rpc CreateToken(SysUser) returns (TokenMessage);
+
+  rpc GetRedisJWT(GetRedisJWTReq) returns (GetRedisRep);
+
+  rpc SetRedisJWT(SetRedisJWTReq) returns (SetRedisJWTRep);
+
+  rpc JsonInBlacklist(JsonInBlacklistReq) returns (JsonInBlacklistRep);
+}
+
+message JsonInBlacklistReq {
+  string blackJWT = 1;
+}
+
+message JsonInBlacklistRep {}
+
+message SetRedisJWTReq {
+  string token = 1;
+  string userName = 2;
+}
+
+message SetRedisJWTRep {}
+
+message GetRedisJWTReq {
+  string userName = 1;
+}
+
+message GetRedisRep {
+  string redisJwt = 1;
 }
 
 // SysUser 请求结构
