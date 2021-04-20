@@ -25,15 +25,17 @@ func NewGatewayServer() *GatewayServer {
 }
 
 func (r *GatewayServer) Start() {
-	gatewayProxy := NewGatewayProxy()
-	http.HandleFunc(r.contextPath, gatewayProxy.dispatch)
-	http.Handle("/favicon.ico", http.FileServer(http.Dir("static")))
+	go func() {
+		gatewayProxy := NewGatewayProxy()
+		http.HandleFunc(r.contextPath, gatewayProxy.dispatch)
+		http.Handle("/favicon.ico", http.FileServer(http.Dir("static")))
 
-	// 服务监听地址
-	addr := r.host + ":" + strconv.Itoa(r.port)
-	global.LOG.Info("服务启动中，服务绑定端口号：", zap.Any("port", r.port))
-	err := http.ListenAndServe(addr, nil)
-	if err != nil {
-		global.LOG.Fatal("API 网关服务启动失败", zap.Any("err", err))
-	}
+		// 服务监听地址
+		addr := r.host + ":" + strconv.Itoa(r.port)
+		global.LOG.Info("服务启动中，服务绑定端口号：", zap.Any("port", r.port))
+		err := http.ListenAndServe(addr, nil)
+		if err != nil {
+			global.LOG.Fatal("API 网关服务启动失败", zap.Any("err", err))
+		}
+	}()
 }

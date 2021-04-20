@@ -7,4 +7,5 @@ type Server struct {
 	ContextPath string        `mapstructure:"contextPath" json:"contextPath" yaml:"contextPath"`
 	Timeout     time.Duration `mapstructure:"timeout" json:"timeout" yaml:"timeout"`
 	Host        string        `mapstructure:"host" json:"v" yaml:"host"`
+	GrpcAddress string        `mapstructure:"grpc-address" json:"grpcAddress" yaml:"grpc-address"`
 }

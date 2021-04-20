@@ -2,6 +2,7 @@ package main
 
 import (
 	"router/global"
+	"router/grpc/start"
 	"router/middleware"
 	"router/pkg/gorm"
 	"router/pkg/redis"
@@ -19,5 +20,8 @@ func main() {
 	router.InitGatewayRouter()       // 初始化gateway
 	middleware.JWTRegisterFilter()   // 注册JWT拦截
 	gatewayServer := server.NewGatewayServer()
-	gatewayServer.Start() // 启动服务
+	gatewayServer.Start() // 启动Gateway服务
+	grpcServer := start.NewGrpcServer()
+	grpcServer.Run() // 启动GRPC服务
+	select {}
 }

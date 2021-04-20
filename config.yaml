@@ -4,6 +4,7 @@ server:
   contextPath: /
   timeout: 10
   host:
+  grpc-address: '127.0.0.1:9528'
 
 # system configuration
 system:
