@@ -35,16 +35,6 @@ func SetRedisJWT(jwt string, userName string) (err error) {
 	return err
 }
 
-//func GetUserID(c *gin.Context) uint {
-//	if claims, exists := c.Get("claims"); !exists {
-//		global.LOG.Error("从Gin的Context中获取从jwt解析出来的用户ID失败, 请检查路由是否使用jwt中间件")
-//		return 0
-//	} else {
-//		waitUse := claims.(*model.CustomClaims)
-//		return waitUse.ID
-//	}
-//}
-
 //登录以后签发jwt
 func CreateToken(user *pb.SysUser) (*pb.TokenMessage, error) {
 	j := &JWT{SigningKey: []byte(global.CONFIG.JWT.SigningKey)} // 唯一签名

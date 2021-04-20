@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bad18dd2-d905-4e96-b6f8-fc096ab02862" name="Default Changelist" comment="grpc结构调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpc/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/start/run.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/latest_log" beforeDir="false" afterPath="$PROJECT_DIR$/latest_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2021-04-06.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2021-04-07.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2021-04-08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2021-04-09.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/service/Jwt_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpc/service/Jwt_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/http_server.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/http_server.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,13 +298,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/grpc/service/Jwt_service.go</url>
-          <line>81</line>
+          <line>71</line>
           <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/main.go</url>
-          <line>23</line>
-          <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/grpc/start/run.go</url>
