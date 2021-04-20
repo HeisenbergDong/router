@@ -35,6 +35,16 @@ func SetRedisJWT(jwt string, userName string) (err error) {
 	return err
 }
 
+func GetUserID(token string) (id uint64, err error) {
+	// parseToken 解析token包含的信息
+	j := NewJWT()
+	claims, err := j.ParseToken(token)
+	if err != nil {
+		return 0, errors.New("parse token fail")
+	}
+	return claims.ID, nil
+}
+
 //登录以后签发jwt
 func CreateToken(user *pb.SysUser) (*pb.TokenMessage, error) {
 	j := &JWT{SigningKey: []byte(global.CONFIG.JWT.SigningKey)} // 唯一签名

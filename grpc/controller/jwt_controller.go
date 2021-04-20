@@ -29,3 +29,8 @@ func (jc *JwtController) JsonInBlacklist(ctx context.Context, req *pb.JsonInBlac
 	jwtList.Jwt = req.BlackJWT
 	return &pb.JsonInBlacklistRep{}, service.JsonInBlacklist(jwtList)
 }
+
+func (jc *JwtController) GetUserID(ctx context.Context, req *pb.GetUserIDReq) (rep *pb.GetUserIDRep, err error) {
+	id, err := service.GetUserID(req.Token)
+	return &pb.GetUserIDRep{Id: id}, err
+}

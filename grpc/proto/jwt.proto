@@ -13,6 +13,16 @@ service JWT {
   rpc SetRedisJWT(SetRedisJWTReq) returns (SetRedisJWTRep);
 
   rpc JsonInBlacklist(JsonInBlacklistReq) returns (JsonInBlacklistRep);
+
+  rpc GetUserID(GetUserIDReq) returns (GetUserIDRep);
+}
+
+message GetUserIDReq {
+  string token = 1;
+}
+
+message GetUserIDRep {
+  uint64 id = 1;
 }
 
 message JsonInBlacklistReq {
