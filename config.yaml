@@ -4,12 +4,13 @@ server:
   contextPath: /
   timeout: 10
   host:
-  grpc-address: '127.0.0.1:9528'
-
+grpc:
+  jwt-address: '127.0.0.1:9528'
 # system configuration
 system:
   db-type: 'mysql'
   use-multipoint: false
+  env: 'public'  # Change to "develop" to skip authentication for development mode
 
 # gateway configuration
 gateway:
@@ -69,3 +70,7 @@ jwt:
   signing-key: 'qmPlus'
   expires-time: 604800
   buffer-time: 86400
+
+# casbin configuration
+casbin:
+  model-path: './cas/rbac_model.conf'

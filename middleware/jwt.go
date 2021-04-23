@@ -6,6 +6,7 @@ import (
 	"router/context"
 	"router/filter"
 	"router/global"
+	"router/grpc/client/authcontroller"
 	"router/grpc/model"
 	"router/grpc/service"
 	"strconv"
@@ -51,7 +52,16 @@ func JWTRegisterFilter() {
 					_ = service.SetRedisJWT(newToken, newClaims.UserName)
 				}
 			}
-			return nil
+			//CASbin
+			sub := claims.AuthorityId
+			act := ctx.Request.Method
+			obj := ctx.Request.URL.RequestURI()
+			success, err := authcontroller.CasController(sub, act, obj)
+			if global.CONFIG.System.Env == "develop" || success {
+				return nil
+			} else {
+				return err
+			}
 		},
 	})
 }
