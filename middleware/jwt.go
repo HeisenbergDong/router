@@ -54,9 +54,9 @@ func JWTRegisterFilter() {
 			}
 			//CASbin
 			sub := claims.AuthorityId
-			act := ctx.Request.Method
 			obj := ctx.Request.URL.RequestURI()
-			success, err := authcontroller.CasController(sub, act, obj)
+			act := ctx.Request.Method
+			success, err := authcontroller.CasController(sub, obj, act)
 			if global.CONFIG.System.Env == "develop" || success {
 				return nil
 			} else {

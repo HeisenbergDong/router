@@ -8,6 +8,5 @@ type Config struct {
 	Mysql         Mysql    `mapstructure:"mysql" json:"mysql" yaml:"mysql"`
 	Redis         Redis    `mapstructure:"redis" json:"redis" yaml:"redis"`
 	JWT           JWT      `mapstructure:"jwt" json:"jwt" yaml:"jwt"`
-	CASbin        CASbin   `mapstructure:"CASbin" json:"CASbin" yaml:"CASbin"`
 	Grpc          Grpc     `mapstructure:"grpc" json:"grpc" yaml:"grpc"`
 }

@@ -12,10 +12,9 @@ require (
 	github.com/lestrrat-go/strftime v1.0.4 // indirect
 	github.com/onsi/ginkgo v1.15.2 // indirect
 	github.com/onsi/gomega v1.11.0 // indirect
-	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.7.1
+	github.com/stretchr/testify v1.6.1 // indirect
 	go.uber.org/zap v1.16.0
-	golang.org/x/net v0.0.0-20201202161906-c7110b5ffcbb
 	google.golang.org/grpc v1.37.0
 	google.golang.org/protobuf v1.25.0
 	gorm.io/driver/mysql v1.0.5

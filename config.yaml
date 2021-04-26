@@ -4,8 +4,12 @@ server:
   contextPath: /
   timeout: 10
   host:
+
+# grpc configuration
 grpc:
   jwt-address: '127.0.0.1:9528'
+  auth-address: '127.0.0.1:9529'
+
 # system configuration
 system:
   db-type: 'mysql'
@@ -70,7 +74,3 @@ jwt:
   signing-key: 'qmPlus'
   expires-time: 604800
   buffer-time: 86400
-
-# casbin configuration
-casbin:
-  model-path: './cas/rbac_model.conf'
