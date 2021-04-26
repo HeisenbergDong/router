@@ -7,6 +7,7 @@ import (
 	"router/global"
 	"router/grpc/controller"
 	"router/grpc/pb"
+	"router/utils"
 )
 
 type GrpcServer struct {
@@ -21,6 +22,7 @@ func NewGrpcServer() *GrpcServer {
 
 func (g *GrpcServer) Run() {
 	go func() {
+		defer utils.RecoverPanic()
 		listen, err := net.Listen("tcp", g.grpcAddress)
 		if err != nil {
 			global.LOG.Error("grpc server", zap.Any(" Failed to listen:", err))
