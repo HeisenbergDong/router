@@ -22,7 +22,7 @@ gateway:
   sensitiveHeaders: [Cookie]
   routers:
     base:
-      path: /base/**
+      path: /base/user/**
       serviceId: user
       stripPrefix: false
       url: http://127.0.0.1:8080
